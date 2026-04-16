@@ -1,7 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Target, Search, Code, Globe, Zap, Shield, Search as SearchIcon, MessageCircle, Github, Linkedin, Mail } from 'lucide-react';
+import Image from 'next/image';
+import { Code, Globe, Zap, Shield, MessageCircle, GitBranch, Users, Mail, Cloud } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -27,35 +28,55 @@ export default function Home() {
 
       {/* Hero Section */}
       <section id="hero" className="min-h-screen flex items-center justify-center px-4 pt-20">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter mb-6 bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent"
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
+          <div className="flex-1 text-center md:text-left">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter mb-6 bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent"
+            >
+              Engenharia de Software
+              <br />
+              focada em Performance e Resultados
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl"
+            >
+              Claudiane Amaral - Infraestrutura de Alta Performance e Automação de Dados.
+            </motion.p>
+            <motion.a
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              href="https://wa.me/5512997286908"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-green-600 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300 group"
+            >
+              <MessageCircle className="mr-2 w-5 h-5" />
+              Falar no WhatsApp
+            </motion.a>
+          </div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="flex-1 flex justify-center md:justify-end mt-8 md:mt-0"
           >
-            Engenharia de Computação
-            <br />
-            + Gestão de Tráfego
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto"
-          >
-            Transformando dados em resultados. Especialista em TI para impulsionar seu negócio.
-          </motion.p>
-          <motion.a
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            href="https://wa.me/5511999999999"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-green-600 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300 group"
-          >
-            <MessageCircle className="mr-2 w-5 h-5" />
-            Falar no WhatsApp
-          </motion.a>
+            <div className="relative">
+              <Image
+                src="/claudiane-amaral.jpg"
+                alt="Claudiane Amaral"
+                width={300}
+                height={300}
+                className="rounded-3xl border-2 border-purple-500/50 shadow-lg shadow-purple-500/25"
+                priority
+              />
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-purple-500/20 to-blue-500/20 blur-xl -z-10"></div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -72,10 +93,10 @@ export default function Home() {
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: Target, title: 'Meta Ads', desc: 'Campanhas otimizadas no Facebook e Instagram.' },
-              { icon: Search, title: 'Google Ads', desc: 'Anúncios performáticos no Google.' },
-              { icon: Code, title: 'Python & Automação', desc: 'Scripts e bots para automação.' },
-              { icon: Globe, title: 'Desenvolvimento Web', desc: 'Sites responsivos e otimizados.' },
+              { icon: Code, title: 'Next.js/React', desc: 'Desenvolvimento de aplicações web modernas.' },
+              { icon: Code, title: 'Python para Automação', desc: 'Scripts e automação de processos.' },
+              { icon: Cloud, title: 'Cloud Computing (AWS)', desc: 'Infraestrutura escalável na nuvem.' },
+              { icon: Shield, title: 'Segurança da Informação', desc: 'Proteção e conformidade de dados.' },
             ].map((item, index) => (
               <motion.div
                 key={item.title}
@@ -106,9 +127,9 @@ export default function Home() {
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { title: 'Landing Page E-commerce', desc: 'Página de conversão otimizada.', img: '/project1.jpg' },
-              { title: 'Site Institucional', desc: 'Presença digital profissional.', img: '/project2.jpg' },
-              { title: 'Dashboard Analytics', desc: 'Interface para monitoramento.', img: '/project3.jpg' },
+              { title: 'Landing Pages de Alta Conversão', desc: 'Páginas otimizadas para máxima conversão.', img: '/project1.jpg' },
+              { title: 'Automação de Dados Financeiros', desc: 'Soluções para processamento automatizado.', img: '/project2.jpg' },
+              { title: 'Arquitetura de Software', desc: 'Sistemas robustos e escaláveis.', img: '/project3.jpg' },
             ].map((project, index) => (
               <motion.div
                 key={project.title}
@@ -166,6 +187,36 @@ export default function Home() {
               <p className="text-gray-300">Proteção avançada</p>
             </motion.div>
           </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-12"
+          >
+            <h4 className="text-lg font-semibold mb-4 text-center">Tempo de Carregamento (segundos)</h4>
+            <div className="flex items-end justify-center space-x-8">
+              {[
+                { label: 'Meu Site', value: 0.8, color: '#a855f7' },
+                { label: 'Concorrente Médio', value: 4.2, color: '#6b7280' },
+              ].map((item, index) => (
+                <div key={item.label} className="text-center">
+                  <motion.div
+                    initial={{ height: 0 }}
+                    whileInView={{ height: `${(item.value / 5) * 200}px` }}
+                    transition={{ duration: 1, delay: 0.6 + index * 0.2 }}
+                    className="w-16 bg-gradient-to-t from-purple-500 to-blue-500 rounded-t mb-2 flex items-end justify-center text-white font-bold text-sm"
+                    style={{ background: `linear-gradient(to top, ${item.color}, ${item.color}aa)` }}
+                  >
+                    <span className="mb-2">{item.value}s</span>
+                  </motion.div>
+                  <p className="text-sm text-gray-300">{item.label}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-center text-sm text-gray-400 mt-4">
+              Carregamento ultra-rápido
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -195,10 +246,10 @@ export default function Home() {
             className="flex justify-center space-x-6 mb-8"
           >
             <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">
-              <Github className="w-6 h-6" />
+              <GitBranch className="w-6 h-6" />
             </a>
             <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">
-              <Linkedin className="w-6 h-6" />
+              <Users className="w-6 h-6" />
             </a>
             <a href="mailto:claudiane@email.com" className="text-gray-400 hover:text-purple-400 transition-colors">
               <Mail className="w-6 h-6" />

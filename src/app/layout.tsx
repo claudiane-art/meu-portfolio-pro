@@ -7,8 +7,19 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Portfólio - Engenharia & Tráfego",
-  description: "Especialista em Engenharia de Computação e Gestão de Tráfego",
+  title: "Claudiane - Engenharia de Computação & Gestão de Tráfego",
+  description: "Portfólio de Claudiane: Especialista em Meta Ads, Google Ads, Python, Automação e Desenvolvimento Web. Transformando dados em resultados.",
+  openGraph: {
+    title: "Claudiane - Engenharia de Computação & Gestão de Tráfego",
+    description: "Portfólio de Claudiane: Especialista em Meta Ads, Google Ads, Python, Automação e Desenvolvimento Web.",
+    type: "website",
+    locale: "pt_BR",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Claudiane - Engenharia de Computação & Gestão de Tráfego",
+    description: "Portfólio de Claudiane: Especialista em Meta Ads, Google Ads, Python, Automação e Desenvolvimento Web.",
+  },
 };
 
 export default function RootLayout({
