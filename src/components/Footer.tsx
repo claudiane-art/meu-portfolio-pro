@@ -1,13 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 const socialLinks = [
-  { icon: Github, href: '#', label: 'GitHub' },
-  { icon: Linkedin, href: '#', label: 'LinkedIn' },
-  { icon: Twitter, href: '#', label: 'Twitter' },
-  { icon: Mail, href: 'mailto:contato@exemplo.com', label: 'Email' },
+  { icon: Github, href: 'https://github.com/claudiane-amaral', label: 'GitHub' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/claudiane-amaral/', label: 'LinkedIn' },
+  { icon: Mail, href: 'mailto:claudiane.silvaamaral@gmail.com', label: 'Email' },
 ];
 
 export default function Footer() {

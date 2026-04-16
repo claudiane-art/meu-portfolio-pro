@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Code, Globe, Zap, Shield, MessageCircle, GitBranch, Users, Mail, Cloud } from 'lucide-react';
+import { Code, Globe, Zap, Shield, MessageCircle, Linkedin, Mail, Cloud } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -15,13 +15,17 @@ export default function Home() {
             animate={{ opacity: 1, x: 0 }}
             className="text-xl font-bold tracking-tighter"
           >
-            Claudiane
+            Claudiane Amaral
           </motion.h1>
-          <div className="hidden md:flex space-x-6">
+          <div className="hidden md:flex items-center space-x-6">
             <a href="#hero" className="hover:text-purple-400 transition-colors">Início</a>
             <a href="#expertise" className="hover:text-purple-400 transition-colors">Expertise</a>
             <a href="#projects" className="hover:text-purple-400 transition-colors">Projetos</a>
             <a href="#performance" className="hover:text-purple-400 transition-colors">Performance</a>
+            <a href="https://www.linkedin.com/in/claudiane-amaral/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-gray-300 hover:text-purple-400 transition-colors">
+              <Linkedin className="w-5 h-5" />
+              LinkedIn
+            </a>
           </div>
         </div>
       </nav>
@@ -93,10 +97,10 @@ export default function Home() {
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: Code, title: 'Next.js/React', desc: 'Desenvolvimento de aplicações web modernas.' },
-              { icon: Code, title: 'Python para Automação', desc: 'Scripts e automação de processos.' },
-              { icon: Cloud, title: 'Cloud Computing (AWS)', desc: 'Infraestrutura escalável na nuvem.' },
-              { icon: Shield, title: 'Segurança da Informação', desc: 'Proteção e conformidade de dados.' },
+              { icon: Code, title: 'Python (Automação e Dados)', desc: 'Automação de processos financeiros e imobiliários.' },
+              { icon: Code, title: 'JavaScript / TypeScript', desc: 'Desenvolvimento front-end moderno e escalável.' },
+              { icon: Globe, title: 'Next.js, React & Tailwind', desc: 'Experiências web rápidas e responsivas.' },
+              { icon: Cloud, title: 'AWS & Vercel', desc: 'Infraestrutura cloud certificada e deploy ultra rápido.' },
             ].map((item, index) => (
               <motion.div
                 key={item.title}
@@ -163,7 +167,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl font-bold tracking-tighter mb-12 bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent"
           >
-            Performance & Segurança
+            Performance & Arquitetura de Software
           </motion.h2>
           <div className="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-12">
             <motion.div
@@ -174,7 +178,7 @@ export default function Home() {
             >
               <Zap className="w-12 h-12 text-green-500 mx-auto mb-2" />
               <h3 className="text-xl font-semibold">100% Core Web Vitals</h3>
-              <p className="text-gray-300">Otimização máxima</p>
+              <p className="text-gray-300">Otimização máxima e experiência fluida.</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -183,8 +187,8 @@ export default function Home() {
               className="bg-white/10 backdrop-blur-md rounded-full px-8 py-4 border border-white/20"
             >
               <Shield className="w-12 h-12 text-blue-500 mx-auto mb-2" />
-              <h3 className="text-xl font-semibold">Security First</h3>
-              <p className="text-gray-300">Proteção avançada</p>
+              <h3 className="text-xl font-semibold">Arquitetura Resiliente</h3>
+              <p className="text-gray-300">Plataformas escaláveis com governança e performance.</p>
             </motion.div>
           </div>
           <motion.div
@@ -214,7 +218,7 @@ export default function Home() {
               ))}
             </div>
             <p className="text-center text-sm text-gray-400 mt-4">
-              Carregamento ultra-rápido
+              Carregamento ultra-rápido com arquitetura pensada para escalar.
             </p>
           </motion.div>
         </div>
@@ -232,7 +236,7 @@ export default function Home() {
             <h3 className="text-2xl font-semibold mb-4">Vamos Conversar?</h3>
             <p className="text-gray-300 mb-6">Pronto para transformar sua presença digital?</p>
             <a
-              href="https://wa.me/5511999999999"
+              href="https://wa.me/5512997286908"
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300"
             >
               <MessageCircle className="mr-2 w-5 h-5" />
@@ -245,13 +249,10 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex justify-center space-x-6 mb-8"
           >
-            <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">
-              <GitBranch className="w-6 h-6" />
+            <a href="https://www.linkedin.com/in/claudiane-amaral/" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-purple-400 transition-colors">
+              <Linkedin className="w-6 h-6" />
             </a>
-            <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">
-              <Users className="w-6 h-6" />
-            </a>
-            <a href="mailto:claudiane@email.com" className="text-gray-400 hover:text-purple-400 transition-colors">
+            <a href="mailto:claudiane.silvaamaral@email.com" className="text-gray-400 hover:text-purple-400 transition-colors">
               <Mail className="w-6 h-6" />
             </a>
           </motion.div>
